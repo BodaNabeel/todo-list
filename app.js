@@ -29,15 +29,24 @@ submitBtn.addEventListener('click', ()=> {
     // 4. Making input field blank
     inputField.value = ""
 
-    //. Done/Check Icon function
+    // 5. Done/Check Icon function
     const checkBtn = document.querySelectorAll(".icon__check") 
     const taskName = document.querySelectorAll(".task__name")
     checkBtn.forEach((el,i) => {
-
         el.addEventListener("click", () => {
         el.innerHTML = "check_box"
         taskName[i].style.textDecoration = "line-through"
         })
     })
+
+    // 6. Delete Icon Function
+    const delBtn = document.querySelectorAll(".icon__del")
+    const currentTask = document.querySelectorAll(".task")
+    delBtn.forEach((el,i) => {
+        el.addEventListener('click', () => {
+        currentTask[i].style.display = "none"
+        })
+    })
+
 
 })
