@@ -9,13 +9,15 @@ body {
 .flex-container {
   display: flex;
   justify-content: center;
-  margin-top: 7rem;
+  margin-top: 3.5vw
 }
 .container {
   background-color: rgba(255, 255, 255, 0.747);
   padding: 3.5rem;
   border-top-right-radius: 3rem;
   border-bottom-left-radius: 3rem;
+
+  overflow: hidden;
 }
 .task,
 .task__btn,
@@ -27,14 +29,72 @@ body {
   background-color: #eeee;
   margin: 1rem 0;
   border-radius: 0.5rem;
+  width: 30rem;
+
+  display: flex;
+  justify-content: space-between;
 }
+
 .task__icon {
-  margin: 0 1rem;
+  height:4;
+  margin: 0 0.2rem;
 }
 
 .heading--main {
   font-family: Oswald;
+  margin-bottom: 2rem;
 }
-.task__name, .clear-task__text {
+.task__name,
+.clear-task__text,
+.clear-task__btn {
   font-family: "Open Sans";
+}
+.input__field {
+  outline: none;
+  border: none;
+  font-family: "Open Sans";
+  height: 3.2rem;
+}
+.submit,
+.clear-task__btn {
+  background-color: #BF5FFF;
+  color: #ffff;
+}
+.submit:hover,
+.clear-task__btn:hover,
+.task__icon:hover {
+  cursor: pointer;
+}
+.submit {
+  font-weight: 800;
+  height: 3.4rem;
+  width: 4rem;
+}
+
+.clear-task {
+  border: 0.2rem solid #eeee;
+  padding: 0.2rem 0.4rem;
+}
+.clear-task__btn {
+  margin-left: 2rem;
+}
+
+/* Media Queries */
+@media screen and (max-width:460px) {
+  body {
+    font-size: 1.5rem;
+  }
+  .flex-container {
+    margin-top: 7.5rem;
+  }
+  .container{
+    padding: 1.2rem
+  }
+  .heading--main {
+    text-align: center;
+  }
+  .submit{
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.8rem;
+  }
 }
