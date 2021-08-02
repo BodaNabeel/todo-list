@@ -48,5 +48,17 @@ submitBtn.addEventListener('click', ()=> {
         })
     })
 
-
+    // 7. Edit Icon Function
+    var editIcon = document.querySelectorAll(".icon__edit")
+    editIcon.forEach((el,i) => {
+        el.addEventListener('click', () => {
+            taskName[i].contentEditable = true;
+        })
+    })
+    // editIcon.addEventListener('click', () => {
+    //     taskName.forEach( el => {
+    //         el.contentEditable = true
+            
+    //     })
+    // })
 })
