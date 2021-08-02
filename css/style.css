@@ -1,0 +1,40 @@
+body {
+  height: 100vh;
+  font-size: 2rem;
+  background-color: #abe9cd;
+  background-image: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);
+  /* FIXME: used a solution which isn't ideal */
+  overflow-y: hidden;
+}
+.flex-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 7rem;
+}
+.container {
+  background-color: rgba(255, 255, 255, 0.747);
+  padding: 3.5rem;
+  border-top-right-radius: 3rem;
+  border-bottom-left-radius: 3rem;
+}
+.task,
+.task__btn,
+.clear-task {
+  display: flex;
+}
+.task {
+  padding: 0.4rem;
+  background-color: #eeee;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+}
+.task__icon {
+  margin: 0 1rem;
+}
+
+.heading--main {
+  font-family: Oswald;
+}
+.task__name, .clear-task__text {
+  font-family: "Open Sans";
+}
