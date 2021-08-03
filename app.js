@@ -4,24 +4,35 @@ const inputField = document.querySelector(".input__field");
 const submitBtn = document.querySelector(".submit__btn");
 const taskName = document.querySelector(".task__name")
 let taskContainer = document.querySelector(".task__container")
-// const doneBtn = document.querySelector(".")
+let inputData
 
-submitBtn.addEventListener('click', ()=> {
-    // 1. Gather the detail about task
-    let inputData = inputField.value
-
-    // 2. Creating DOM skeleton 
-    const taskObjectForDOM = document.createElement("div");
-    taskObjectForDOM.classList.add("task")
-    const markup = `
-    <p class="task__name">${inputData}</p>
+//  DOM skeleton 
+let taskObjectForDOM = document.createElement("div");
+taskObjectForDOM.classList.add("task")
+// let markup = `
+{/* <p class="task__name">${inputData}</p>
+<div class="task__btn">
+<span class="material-icons task__icon icon__check"> echeck_box_outline_blank </span>
+<span class="material-icons task__icon icon__edit"> edit </span>
+<span class="material-icons task__icon icon__del"> delete </span>
+</div> */}
+// `;
+let markup = function(info) {
+    const structure = `<p class="task__name">${info}</p>
     <div class="task__btn">
     <span class="material-icons task__icon icon__check"> echeck_box_outline_blank </span>
     <span class="material-icons task__icon icon__edit"> edit </span>
     <span class="material-icons task__icon icon__del"> delete </span>
-    </div>
-    `;
-    taskObjectForDOM.innerHTML = markup
+    </div>`
+    return structure
+}
+
+submitBtn.addEventListener('click', ()=> {
+    // 1. Gather the detail about task
+    inputData = inputField.value
+
+    
+    taskObjectForDOM.innerHTML = markup(inputData)
 
     // 3 Displaying task
     taskContainer.appendChild(taskObjectForDOM)
@@ -55,10 +66,7 @@ submitBtn.addEventListener('click', ()=> {
             taskName[i].contentEditable = true;
         })
     })
-    // editIcon.addEventListener('click', () => {
-    //     taskName.forEach( el => {
-    //         el.contentEditable = true
-            
-    //     })
-    // })
 })
+
+
+
