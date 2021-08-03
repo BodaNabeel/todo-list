@@ -3,7 +3,6 @@ body {
   font-size: 2rem;
   background-color: #abe9cd;
   background-image: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);
-  /* FIXME: used a solution which isn't ideal */
   overflow-y: hidden;
 }
 .flex-container {

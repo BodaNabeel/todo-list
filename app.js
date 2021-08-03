@@ -69,7 +69,7 @@ submitBtn.addEventListener("click", () => {
             });
         });
 
-        // 8. Retrieving back to initial styling
+        // 8. Retrieving back to initial styling.
         taskName.forEach((el, i) => {
             el.addEventListener("click",() => {
                 taskName[i].style.backgroundColor = "#eee";
