@@ -2,7 +2,6 @@
 
 const inputField = document.querySelector(".input__field");
 const submitBtn = document.querySelector(".submit__btn");
-const taskName = document.querySelector(".task__name");
 let taskContainer = document.querySelector(".task__container");
 
 let markup = function (info) {
@@ -64,7 +63,18 @@ submitBtn.addEventListener("click", () => {
         editIcon.forEach((el, i) => {
             el.addEventListener("click", () => {
                 taskName[i].contentEditable = true;
+                taskName[i].focus()
+                taskName[i].style.backgroundColor = "blue";
+                taskName[i].style.color = "white"
             });
         });
+
+        // 8. Retrieving back to initial styling
+        taskName.forEach((el, i) => {
+            el.addEventListener("click",() => {
+                taskName[i].style.backgroundColor = "#eee";
+                taskName[i].style.color = "black"
+            });
+        })
     }
 });
