@@ -4,19 +4,8 @@ const inputField = document.querySelector(".input__field");
 const submitBtn = document.querySelector(".submit__btn");
 const taskName = document.querySelector(".task__name")
 let taskContainer = document.querySelector(".task__container")
-let inputData
 
-//  DOM skeleton 
-let taskObjectForDOM = document.createElement("div");
-taskObjectForDOM.classList.add("task")
-// let markup = `
-{/* <p class="task__name">${inputData}</p>
-<div class="task__btn">
-<span class="material-icons task__icon icon__check"> echeck_box_outline_blank </span>
-<span class="material-icons task__icon icon__edit"> edit </span>
-<span class="material-icons task__icon icon__del"> delete </span>
-</div> */}
-// `;
+
 let markup = function(info) {
     const structure = `<p class="task__name">${info}</p>
     <div class="task__btn">
@@ -29,10 +18,18 @@ let markup = function(info) {
 
 submitBtn.addEventListener('click', ()=> {
     // 1. Gather the detail about task
-    inputData = inputField.value
+    let inputData = inputField.value
 
-    
-    taskObjectForDOM.innerHTML = markup(inputData)
+    //  DOM skeleton 
+    let taskObjectForDOM = document.createElement("div");
+    taskObjectForDOM.classList.add("task")
+    let markup = `<p class="task__name">${inputData}</p>
+        <div class="task__btn">
+        <span class="material-icons task__icon icon__check"> echeck_box_outline_blank </span>
+        <span class="material-icons task__icon icon__edit"> edit </span>
+        <span class="material-icons task__icon icon__del"> delete </span>
+        </div>`
+    taskObjectForDOM.innerHTML = markup
 
     // 3 Displaying task
     taskContainer.appendChild(taskObjectForDOM)
