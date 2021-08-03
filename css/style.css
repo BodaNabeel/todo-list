@@ -55,13 +55,11 @@ body {
   font-family: "Open Sans";
   height: 3.2rem;
 }
-.submit__btn,
-.clear-task__btn {
+.submit__btn {
   background-color: #bf5fff;
   color: #ffff;
 }
 .submit__btn:hover,
-.clear-task__btn:hover,
 .task__icon:hover,
 .checkbox__icon {
   cursor: pointer;
@@ -76,13 +74,6 @@ body {
   width: 2rem;
   border: 50px solid black;
   margin-top: 2px;
-}
-.clear-task {
-  border: 0.2rem solid #eeee;
-  padding: 0.2rem 0.4rem;
-}
-.clear-task__btn {
-  margin-left: 2rem;
 }
 
 /* Media Queries */
